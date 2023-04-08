@@ -1,0 +1,30 @@
+name: Analyze Build Size
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  analyze-build-size:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the application
+        run: npm run build
+
+      - name: Generate build stats report
+        env:
+          ANALYZE: true
+        run: npm run build
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-stats
+          path: out/build-stats.html
