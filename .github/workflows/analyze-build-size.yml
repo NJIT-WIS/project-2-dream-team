@@ -6,25 +6,23 @@ on:
       - main
 
 jobs:
-  analyze-build-size:
+  analyze-build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install dependencies
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2.5.1
+        with:
+          node-version: '16.x'
+      - name: Install Dependencies
         run: npm install
-
-      - name: Build the application
-        run: npm run build
-
-      - name: Generate build stats report
+      - name: Analyze Build Size
         env:
           ANALYZE: true
         run: npm run build
-
-      - name: Upload report artifact
+      - name: Upload Report
+        if: success()
         uses: actions/upload-artifact@v2
         with:
-          name: build-stats
-          path: out/build-stats.html
+          name: build-report
+          path: .next/stats/*.html
