@@ -1,0 +1,17 @@
+{
+  "metaData": {
+    "title" : "MyWebClass | Minimal NextJS Blog Template",
+    "description" : "MyWebClass - a minimal nextjs blog template",
+    "author" : "Your Name",
+    "keyword" : "mywebclass, minimal, react, nextjs, blog, template",
+    "ogImage" : "https://mywebclass.org/images/ogimage.jpg"
+  },
+  "baseURL" : "https://mywebclass.org/",
+  "logo" : "/images/logo.png",
+  "logo_light" : "/images/logo-light.png",
+  "logoText" : "MyWebClass",
+  "favicon" : "/images/favicon.png",
+  "postPerPage" : 6,
+  "postColumns" : 2,
+  "copyright" : "© 2023 MyWebClass. All rights reserved."
+}
