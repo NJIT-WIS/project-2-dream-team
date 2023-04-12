@@ -20,7 +20,6 @@ jobs:
           npm ci
           npx playwright install chromium
           npm install -g lighthouse chrome-launcher axe-core chromium wait-on 
-          npm install next@latest
 
       - name: Create the build
         run: npx next build
