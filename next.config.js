@@ -6,4 +6,6 @@ module.exports = {
     return defaultPathMap;
   },
 };
+const withImages = require("next-images");
+module.exports = withImages();
 
