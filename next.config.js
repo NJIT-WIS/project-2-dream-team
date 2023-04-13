@@ -1,9 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
+module.exports = {
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return defaultPathMap;
+  },
+  images: {
+    disableStaticImages: true,
   },
 };
 
-module.exports = nextConfig;
+
