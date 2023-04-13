@@ -1,6 +1,4 @@
-const withOptimizedImages = require('next-optimized-images');
-
-module.exports = withOptimizedImages({
+module.exports = {
   exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
@@ -10,5 +8,6 @@ module.exports = withOptimizedImages({
   images: {
     disableStaticImages: true,
   },
-  /* Your additional config options here */
-});
+};
+
+
