@@ -1,27 +1,29 @@
-const locales = ["en", "fr", "es"];
-
-module.exports = {
+const nextConfig = {
   i18n: {
-    locales,
+    locales: ["en", "fr", "es"],
     defaultLocale: "en",
   },
   exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
   ) {
-    // Generate a mapping of paths to exported HTML pages for each locale
-    const pathMap = {};
+    const localePaths = [];
 
-    for (const locale of locales) {
+    for (const locale of nextConfig.i18n.locales) {
+      const localePathMap = {};
+
       for (const [path, page] of Object.entries(defaultPathMap)) {
-        // Add the locale prefix to the path for each locale
         const localePath = `/${locale}${path === "/" ? "" : path}`;
-
-        // Add the page to the pathMap for the current locale
-        pathMap[localePath] = { ...page, query: { ...page.query, locale } };
+        localePathMap[localePath] = { ...page, query: { ...page.query, locale } };
       }
+
+      localePaths.push(localePathMap);
     }
+
+    const pathMap = Object.assign({}, ...localePaths);
 
     return pathMap;
   },
 };
+
+module.exports = nextConfig;
