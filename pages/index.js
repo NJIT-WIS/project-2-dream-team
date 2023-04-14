@@ -8,11 +8,29 @@ import { getPosts } from "@/libs/getPosts";
 import { getSinglePage } from "@/libs/getSinglePage";
 import { IconNewSection } from "@tabler/icons";
 import Link from "next/link";
+import { useState } from "react";
+
+// Import the PrivacyPolicy component
+import PrivacyPolicy from "@/components/PrivacyPolicy";
 
 export default function Home({ authors, posts, banner }) {
   const postColumns = siteConfig.postColumns;
+
+  // Define a state variable to manage the visibility of the PrivacyPolicy component
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(true);
+
+  // Define a function to hide the PrivacyPolicy component when the user agrees to the privacy policy
+  const handlePrivacyPolicyAgree = () => {
+    setShowPrivacyPolicy(false);
+  };
+
   return (
     <Layout>
+      {/* Render the PrivacyPolicy component if it should be visible */}
+      {showPrivacyPolicy && (
+        <PrivacyPolicy onAgree={handlePrivacyPolicyAgree} />
+      )}
+
       <BannerBlock banner={banner} />
 
       <div className="container">
