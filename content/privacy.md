@@ -1,12 +1,12 @@
 ---
-title: "Privacy"
+title: "Privacy & Cookies"
 description: "Privacy & Policy"
 ---
 
 **Last updated on April 10, 2023**
 
 
-Below are our dummy [Privacy & Policy](#!), which outline a lot of legal goodies, but the bottom line is it’s our aim to always take care of both you, as a customer on our platform.
+Below are our dummy [Privacy & Cookies Policy](#!), which outline a lot of legal goodies, but the bottom line is it’s our aim to always take care of both you, as a customer on our platform.
 
 ### Licensing Policy
 
