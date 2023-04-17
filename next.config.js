@@ -3,11 +3,9 @@ module.exports = {
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
   ) {
-    return defaultPathMap;
+    return defaultPathMap
   },
   images: {
-    disableStaticImages: true,
-  },
-};
-
-
+    disableStaticImages: true
+  }
+}

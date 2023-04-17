@@ -1,20 +1,20 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from "react";
-import { Button, Modal } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import React from 'react'
+import { Button, Modal } from 'react-bootstrap'
 
 const PrivacyPolicy = ({ onAgree }) => {
   const handleClose = () => {
     // If the user closes the modal without agreeing to the privacy policy, set showPrivacyPolicy to false
-    onAgree && onAgree(false);
-  };
+    onAgree && onAgree(false)
+  }
 
   const handleAgree = () => {
     // If the user agrees to the privacy policy, set showPrivacyPolicy to false and run the onAgree callback function
-    onAgree && onAgree(true);
-  };
+    onAgree && onAgree(true)
+  }
 
   return (
-    <Modal show={true} onHide={handleClose}>
+    <Modal show onHide={handleClose}>
       <Modal.Header closeButton>
         <Modal.Title>Privacy Policy</Modal.Title>
       </Modal.Header>
@@ -23,15 +23,15 @@ const PrivacyPolicy = ({ onAgree }) => {
         <p>Do you agree to our Privacy & Cookies Policy?.</p>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
+        <Button variant='secondary' onClick={handleClose}>
           Disagree
         </Button>
-        <Button variant="primary" onClick={handleAgree}>
+        <Button variant='primary' onClick={handleAgree}>
           Agree
         </Button>
       </Modal.Footer>
     </Modal>
-  );
-};
+  )
+}
 
-export default PrivacyPolicy;
+export default PrivacyPolicy
