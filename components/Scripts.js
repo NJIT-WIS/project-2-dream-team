@@ -6,7 +6,7 @@ const useScript = (url, position, async) => {
     const script = document.createElement('script')
     script.src = url
     script.async = typeof async === 'undefined' ? true : async
-    placement.appendChild(script)
+    placement => appendChild(script)
     return () => {
       placement.removeChild(script)
     }
