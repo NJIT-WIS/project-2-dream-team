@@ -4,15 +4,15 @@ const optimizedImages = require('next-optimized-images')
 module.exports = withPlugins([
   [optimizedImages, {
     handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
-    optimizeImages: true,
-    optimizeImagesInDev: true,
+    optimizeImages: false,
+    optimizeImagesInDev: false,
     mozjpeg: {
       quality: 80
     },
     pngquant: {
       speed: 3,
-      strip: true,
-      verbose: true
+      strip: false,
+      verbose: false
     },
     svgo: {
       plugins: [
@@ -29,6 +29,6 @@ module.exports = withPlugins([
   }]
 ], {
   images: {
-    disableStaticImages: false
+    disableStaticImages: true
   }
 })
