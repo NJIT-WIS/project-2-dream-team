@@ -1,7 +1,13 @@
 const withPlugins = require('next-compose-plugins')
 const optimizedImages = require('next-optimized-images')
 
-const nextConfig = {
+module.exports = withPlugins([
+  [optimizedImages, {
+    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
+    optimizeImages: false,
+    optimizeImagesInDev: false
+  }]
+], {
   exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
@@ -11,8 +17,4 @@ const nextConfig = {
   images: {
     disableStaticImages: true
   }
-}
-
-module.exports = withPlugins([
-  optimizedImages
-], nextConfig)
+})
