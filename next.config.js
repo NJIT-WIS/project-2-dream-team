@@ -4,8 +4,9 @@ const optimizedImages = require('next-optimized-images')
 module.exports = withPlugins([
   [optimizedImages, {
     handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
-    optimizeImages: false,
-    optimizeImagesInDev: false
+    optimizeImages: true,
+    optimizeImagesInDev: true,
+    loader: 'sharp'
   }]
 ], {
   exportPathMap: async function (
@@ -15,6 +16,6 @@ module.exports = withPlugins([
     return defaultPathMap
   },
   images: {
-    disableStaticImages: true
+    disableStaticImages: false
   }
 })
