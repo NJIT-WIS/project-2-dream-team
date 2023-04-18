@@ -6,15 +6,28 @@ module.exports = withPlugins([
     handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
     optimizeImages: true,
     optimizeImagesInDev: true,
-    loader: 'sharp'
+    mozjpeg: {
+      quality: 80
+    },
+    pngquant: {
+      speed: 3,
+      strip: true,
+      verbose: true
+    },
+    svgo: {
+      plugins: [
+        {
+          name: 'preset-default',
+          params: {
+            overrides: {
+              cleanupIDs: false
+            }
+          }
+        }
+      ]
+    }
   }]
 ], {
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return defaultPathMap
-  },
   images: {
     disableStaticImages: false
   }
