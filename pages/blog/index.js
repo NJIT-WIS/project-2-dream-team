@@ -1,4 +1,4 @@
-import Blog, { getStaticProps } from "./page/[page]";
+import Blog, { getStaticProps } from './page/[page]'
 
-export { getStaticProps };
-export default Blog;
+export { getStaticProps }
+export default Blog
