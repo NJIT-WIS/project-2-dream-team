@@ -4,9 +4,9 @@
     "description" : "MyWebClass - a minimal nextjs blog template",
     "author" : "Berta Marani, Tawana Arthur, Rajiv Kumar",
     "keyword" : "mywebclass, minimal, react, nextjs, blog, template",
-    "ogImage" : "https://mywebclass.org/images/ogimage.jpg"
+    "ogImage" : "https://localhost:3000/images/ogimage.jpg"
   },
-  "baseURL" : "https://mywebclass.org/",
+  "baseURL" : "https://localhost:3000",
   "logo" : "/images/logo.png",
   "logo_light" : "/images/logo-light.png",
   "logoText" : "MyWebClass",

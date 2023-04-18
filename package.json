@@ -1,5 +1,5 @@
 {
-  "name": "qurno-nextjs",
+"name": "qurno-nextjs",
   "author": "Platol",
   "description": "Packages For Qurno Next.js Template",
   "version": "2.2.0",
@@ -25,6 +25,7 @@
     "next": "12.1.0",
     "next-images": "^1.8.4",
     "next-optimized-images": "^2.6.2",
+    "next-seo": "^6.0.0",
     "next-themes": "^0.2.0",
     "react": "17.0.2",
     "react-bootstrap": "^2.7.3",
@@ -38,6 +39,7 @@
     "eslint": "8.8.0",
     "eslint-config-next": "12.0.9",
     "husky": "^7.0.4",
-    "playwright": "^1.32.1"
+    "jest-playwright-preset": "^3.0.1",
+    "playwright": "^1.32.3"
   }
 }
