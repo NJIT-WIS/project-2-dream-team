@@ -1,158 +1,137 @@
 ---
 title: "Elements"
-description: "this is meta description"
+draft: false
 ---
 
+#### Heading example
 
-### Elements
+Here is an example of headings. You can use this heading by the following markdown rules. For example: use `#` for heading 1 and use `######` for heading 6.
 
-This page demonstrate some basic elements and typography which you will use frequently within your site. Make the text **bold** or make it *italic*. Why not **_bold and italic_** both at a time. Here is the link to [Next.js](https://nextjs.org/) website. Do you want to link a long text [here how it looks in this theme](https://nextjs.org/).
+# Heading 1
 
-URLs and URLs in angle brackets will automatically get turned into links. https://nextjs.org/ or <https://nextjs.org/> and sometimes www.example.com (but not on Github, for example).
+## Heading 2
 
-# Heading one
-## Heading two
-### Heading three
-#### Heading four
-##### Heading five
-###### Heading six
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+---
+
+### Emphasis
+
+The emphasis, aka italics, with _asterisks_ or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
+
+The combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+
+---
+
+### Link
+
+[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+[I'm a reference-style link][arbitrary case-insensitive reference text]
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself].
+
+example.com (but not on Github, for example).
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.themefisher.com
+[1]: https://gethugothemes.com
+[link text itself]: https://www.getjekyllthemes.com
+
+---
 
 ### Paragraph
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.
 
-It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-<hr/>
+---
 
 ### Ordered List
 
-1. The leap into electronic typesetting
-2. It was popularised in the 1960s
-3. Recently with desktop publishing software
-4. An unknown printer took a galley
-5. It has survived not only five centuries
+1. List item
+2. List item
+3. List item
+4. List item
+5. List item
 
-<hr/>
+---
 
 ### Unordered List
 
-* The leap into electronic typesetting
-* It was popularised in the 1960s
-* Recently with desktop publishing software
-* An unknown printer took a galley
-* It has survived not only five centuries
+- List item
+- List item
+- List item
+- List item
+- List item
 
-<hr/>
+---
+
+### Code and Syntax Highlighting
+
+This is an `Inline code` sample.
+
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+---
 
 ### Blockquote
 
-> Since its beginning in the 1950s, the field of artificial intelligence has cycled several times between periods of optimistic predictions and investment
-<cite>Alexender Toto</cite>
+> This is a blockquote example.
 
-<hr/>
+---
 
-### Responsive Markdown table
+### Inline HTML
 
-Colons can be used to align columns.
-<div class="table-responsive">
+You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
 
-| Firsname | Lastname | Age | Lives in | Profession |
-| -------- | -------- | --- | -------- | ---------- |
-| Jill     | Smith    | 29  | New york | Developer  |
-| Eve      | Jackson  | 36  | New york | Musician   |
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
 
-</div>
-<hr/>
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
 
-### Responsive HTML table
+---
 
-<div class="table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+### Tables
 
-<hr/>
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
-### Image
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the
+raw Markdown line up prettily. You can also use inline Markdown.
 
-<figure>
-  <img src="../images/blog/02.jpg" alt="image caption" title="this is example title">
-  <figcaption>This is example photo caption</figcaption>
-</figure>
-
-<hr/>
-
-### Gallery
-<div class="gallery">
-  <img src="../images/blog/01.jpg" alt="image caption" title="this is example title">
-  <img src="../images/blog/02.jpg" alt="image caption" title="this is example title">
-  <img src="../images/blog/03.jpg" alt="image caption" title="this is example title">
-  <img src="../images/blog/04.jpg" alt="image caption" title="this is example title">
-  <img src="../images/blog/05.jpg" alt="image caption" title="this is example title">
-  <img src="../images/blog/06.jpg" alt="image caption" title="this is example title">
-</div>
-
-<hr/>
-
-### Youtube video
-<div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/NC0WPQd_bds" title="YouTube video" allowfullscreen></iframe></div>
-
-<hr/>
-
-### Vimeo video
-<div style="padding:56.25% 0 0 0;position:relative;">
-<iframe src="https://player.vimeo.com/video/341490793?h=189bbac4d0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-</div><script src="https://player.vimeo.com/api/player.js"></script>
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |

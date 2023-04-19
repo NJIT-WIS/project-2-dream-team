@@ -1,20 +1,14 @@
-const withPlugins = require('next-compose-plugins')
-const optimizedImages = require('next-optimized-images')
+/**
+ * @type {import('next').NextConfig}
+ */
 
-module.exports = withPlugins([
-  [optimizedImages, {
-    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
-    optimizeImages: false,
-    optimizeImagesInDev: false
-  }]
-], {
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return defaultPathMap
-  },
+const nextConfig = {
+  reactStrictMode: true,
+};
+
+module.exports = {
+  reactStrictMode: true,
   images: {
-    disableStaticImages: true
+    unoptimized: true
   }
-})
+};
