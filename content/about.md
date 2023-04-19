@@ -1,36 +1,17 @@
 ---
-title: "About"
-description: "This a dummy meta description of about page"
+title: "I’m John Doe, A content writer based in LDN, currently at Bookworm"
+meta_title: "About"
+image: "/images/author.jpg"
+layout: "about"
+draft: false
 
-#intro
-intro:
-  title: "We are the Qurno, <br> Team of content writers and designers."
-  description: "If ever a place existed where you could just go crazy creatively, it is definitely your about page. It’s your chance to show your readers who you really are. Pictures, quotes, inspirational graphics, whatever it is that drives you.. Display it here in a way that only you can.
-  
-  
-  I’ve included a plugin in the setup of this theme that will make adding columns to your pages and posts a piece of cake. Let creativity take control, and forget about the technical end of things, I’ve got your six."
-
-  # about images
-  images:
-  - src: "/images/about/01.jpg"
-    width: "620px"
-    height: "346px"
-    grid_class: "col-lg-6"
-
-  - src: "/images/about/00.jpg"
-    width: "460px"
-    height: "515px"
-    grid_class: "col-lg-3 col-6"
-
-  - src: "/images/about/02.jpg"
-    width: "460px"
-    height: "444px"
-    grid_class: "col-lg-3 col-6"
-
-
-# our writers
-# if "enable: false" authors/writers will not show on the about page
-our_writers:
-  enable: true
- 
+# social sites
+social:
+  facebook: "https://www.facebook.com"
+  twitter: "https://www.twitter.com"
+  instagram: "https://www.instagram.com"
 ---
+
+A content writer with over 12 years experience working across brand identity, publishing and digital products. Maecenas sit amet purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget.
+
+Purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis.
