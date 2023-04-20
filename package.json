@@ -10,7 +10,10 @@
     "export": "next build && next export",
     "cache-posts": "node cache-posts.js",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "cache-posts": "node scripts/cache-posts.js",
+    "prepare": "husky install",
+    "test": "npx playwright test"
   },
   "dependencies": {
     "fs": "^0.0.1-security",
