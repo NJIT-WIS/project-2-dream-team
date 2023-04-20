@@ -1,7 +1,7 @@
 ---
 title: "Privacy"
 meta_title: "MyWebClass | Privacy Policy"
-description: "this is meta description"
+description: "MyWebClass takes your privacy and security seriously. Our privacy policy outlines how we collect, use, and protect your personal information when you use our platform. We are committed to complying with all applicable data protection laws and regulations, and to being transparent about our data practices. Our privacy policy also explains how you can access, update, or delete your personal information, and how you can contact us if you have any questions or concerns. Trust us to keep your data safe and secure while you focus on your learning goals!"
 draft: false
 ---
 
