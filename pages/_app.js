@@ -33,6 +33,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <JsonContext>
       <Head>
+       <meta property="og:title" content="MyWebClass" />
         {/* google font css */}
         <link
           rel='preconnect'
