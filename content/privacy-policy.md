@@ -1,5 +1,6 @@
 ---
 title: "Privacy"
+meta_title: "MyWebClass | Privacy Policy"
 description: "this is meta description"
 draft: false
 ---
