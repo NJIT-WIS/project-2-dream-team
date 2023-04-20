@@ -5,6 +5,10 @@
       "url": "/"
     },
     {
+      "name": "Blogs",
+      "url": "/blogs"
+    },
+    {
       "name": "About",
       "url": "/about"
     },
@@ -17,10 +21,6 @@
       "url": "",
       "hasChildren": true,
       "children": [
-        {
-          "name": "Authors",
-          "url": "/authors"
-        },
         {
           "name": "Categories",
           "url": "/categories"
@@ -36,6 +36,10 @@
         {
           "name": "Privacy Policy",
           "url": "/privacy-policy"
+        },
+        {
+          "name": "Volunteer",
+          "url": "/volunteer"
         }
       ]
     }
@@ -59,3 +63,4 @@
     }
   ]
 }
+
