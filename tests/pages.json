@@ -1,9 +1,28 @@
 {
-    "pages": [
-      {
-        "path": "/",
-        "title": "MyWebClass | Revolutionize Education"
-      }
-    ]
+  "pages": [
+    {
+      "path": "/",
+      "title": "MyWebClass | Revolutionize Education"
+    },
+    {
+      "path": "/about",
+      "title": "MyWebClass | About"
+    },
+    {
+      "path": "/contact",
+      "title": "MyWebClass | Contact"
+    },
+    {
+      "path": "/privacy-policy",
+      "title": "MyWebClass | Privacy Policy"
+    },
+    {
+      "path": "/blog",
+      "title": "MyWebClass | Blogs"
+    },
+    {
+      "path": "/volunteer",
+      "title": "MyWebClass | Volunteer"
+    }
+  ]
 }
-  

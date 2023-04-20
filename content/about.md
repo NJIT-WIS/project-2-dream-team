@@ -1,6 +1,6 @@
 ---
-title: "I’m John Doe, A content writer based in LDN, currently at Bookworm"
-meta_title: "About"
+title: "MyWebClass | About"
+meta_title: "MyWebClass | About"
 image: "/images/author.jpg"
 layout: "about"
 draft: false
