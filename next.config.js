@@ -3,12 +3,12 @@
  */
 
 const nextConfig = {
-  reactStrictMode: true,
-};
+  reactStrictMode: true
+}
 
 module.exports = {
   reactStrictMode: true,
   images: {
     unoptimized: true
   }
-};
+}
