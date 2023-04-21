@@ -4,37 +4,43 @@
       "path": "/",
       "title": "MyWebClass | Revolutionize Education",
       "description": "Revolutionize Education: Empower your classroom with Easy Daily Management",
-      "ogTitle": "MyWebClass"
+      "ogTitle": "MyWebClass",
+      "ogDescription": "Revolutionize Education: Empower your classroom with Easy Daily Management"
     },
     {
       "path": "/about",
       "title": "MyWebClass | About",
       "description": "MyWebClass is an online education platform created to revolutionize the way people learn. Our mission is to provide accessible and affordable education to anyone, anywhere, anytime. MyWebClass was founded in 2022 by Keith Williams, who is passionate about education and technology. Our team of experts includes experienced educators and developers who work together to create engaging and effective courses in various subjects. Join us and start your learning journey today!",
-      "ogTitle": "MyWebClass"
+      "ogTitle": "MyWebClass",
+      "ogDescription": "Revolutionize Education: Empower your classroom with Easy Daily Management"
     },
     {
       "path": "/contact",
       "title": "MyWebClass | Contact",
       "description": "Contact MyWebClass for any questions, concerns, or feedback about our courses or platform. Our friendly and knowledgeable support team is available 24/7 to assist you. Whether you need help with enrolling in a course, accessing course materials, or troubleshooting technical issues, we're here to help. You can reach us by phone, email, or through our online contact form. Join the MyWebClass community today and let us help you achieve your learning goals!",
-      "ogTitle": "MyWebClass"
+      "ogTitle": "MyWebClass",
+      "ogDescription": "Revolutionize Education: Empower your classroom with Easy Daily Management"
     },
     {
       "path": "/privacy-policy",
       "title": "MyWebClass | Privacy Policy",
       "description": "MyWebClass takes your privacy and security seriously. Our privacy policy outlines how we collect, use, and protect your personal information when you use our platform. We are committed to complying with all applicable data protection laws and regulations, and to being transparent about our data practices. Our privacy policy also explains how you can access, update, or delete your personal information, and how you can contact us if you have any questions or concerns. Trust us to keep your data safe and secure while you focus on your learning goals!",
-      "ogTitle": "MyWebClass"
+      "ogTitle": "MyWebClass",
+      "ogDescription": "Revolutionize Education: Empower your classroom with Easy Daily Management"
     },
     {
       "path": "/blogs",
       "title": "MyWebClass | Blogs",
       "description": "The MyWebClass blog is your go-to resource for news, insights, and tips on AI education and agile and lean learning. Our team of experts covers the latest trends, techniques, and best practices in these fields, providing you with valuable information and practical advice. Whether you're a student, professional, or educator, our blog has something for everyone interested in staying ahead of the curve in AI education and learning methodologies. Join us and learn how to apply cutting-edge technologies and strategies to achieve your learning goals!",
-      "ogTitle": "MyWebClass"
+      "ogTitle": "MyWebClass",
+      "ogDescription": "Revolutionize Education: Empower your classroom with Easy Daily Management"
     },
     {
       "path": "/volunteer",
       "title": "MyWebClass | Volunteer",
       "description": "Join the MyWebClass volunteer team and help us develop our website for AI education and agile and lean learning. As a volunteer, you will work with our team of experts to create engaging and effective online courses, develop cutting-edge features and technologies, and contribute to our mission of revolutionizing education. Whether you're a web developer, UX designer, content creator, or just passionate about education and technology, we have opportunities for you. Join us and make a difference in the lives of learners around the world!",
-      "ogTitle": "MyWebClass"
+      "ogTitle": "MyWebClass",
+      "ogDescription": "Revolutionize Education: Empower your classroom with Easy Daily Management"
     }
   ]
 }
