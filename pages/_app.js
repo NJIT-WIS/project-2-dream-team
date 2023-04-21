@@ -34,6 +34,7 @@ const App = ({ Component, pageProps }) => {
     <JsonContext>
       <Head>
        <meta property="og:title" content="MyWebClass" />
+       <meta property="og:description" content="Revolutionize Education: Empower your classroom with Easy Daily Management" />
         {/* google font css */}
         <link
           rel='preconnect'
