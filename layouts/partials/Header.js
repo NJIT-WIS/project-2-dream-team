@@ -118,6 +118,10 @@ const Header = () => {
             setSearchModal={setSearchModal}
           />
         </nav>
+         <h1 className="text-center">
+  <span className="text-7xl font-bold">Revolutionize Education</span>{" "}
+  <span className="block">Empower Your Classroom with Easy Daily Management!</span>
+</h1>
       </header>
     </>
   )
