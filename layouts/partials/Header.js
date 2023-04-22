@@ -36,12 +36,13 @@ const Header = () => {
           <div className='order-0'>
             <Logo />
           </div>
-          {/* navbar toggler */}
+          {/* navbar toggler - Rajiv on April-21 added aria-label for accessibility */}
           <input id='nav-toggle' type='checkbox' className='hidden' />
           <label
             id='show-button'
             htmlFor='nav-toggle'
             className='order-2 flex cursor-pointer items-center md:order-1 md:hidden'
+            aria-label='Open Navigation Menu'
           >
             <svg className='h-6 fill-current' viewBox='0 0 20 20'>
               <title>Menu Open</title>
@@ -118,10 +119,10 @@ const Header = () => {
             setSearchModal={setSearchModal}
           />
         </nav>
-         <h1 className="text-center">
-  <span className="text-7xl font-bold">Revolutionize Education</span>{" "}
-  <span className="block">Empower Your Classroom with Easy Daily Management!</span>
-</h1>
+        <h1 className='text-center'>
+          <span className='text-7xl font-bold'>Revolutionize Education</span>{' '}
+          <span className='block'>Empower Your Classroom with Easy Daily Management!</span>
+        </h1>
       </header>
     </>
   )

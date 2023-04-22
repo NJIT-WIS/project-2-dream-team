@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import Footer from '@components/Footer';
-
+import Footer from '@components/Footer'
 
 const Pagination = ({ section, currentPage, totalPages }) => {
   const indexPageLink = currentPage === 2
