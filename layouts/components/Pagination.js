@@ -85,7 +85,7 @@ const Pagination = ({ section, currentPage, totalPages }) => {
                   <Link
                     href={
                     i === 0
-                      ? `${section ? '/' + section : '/'}`
+                      ? `${section ? '/' + section : '/blogs'}`
                       : `${section ? '/' + section : ''}/page/${pagination}`
                   }
                     passHref
