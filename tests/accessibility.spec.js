@@ -5,7 +5,7 @@ test.describe('Accessibility tests', () => {
 
   test.beforeEach(async ({ browser }) => {
     page = await browser.newPage()
-    await page.goto('http://localhost:3000')
+    await page.goto('baseURL')
     await page.setViewportSize({ width: 1280, height: 800 })
   })
 
