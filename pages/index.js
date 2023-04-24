@@ -17,12 +17,12 @@ const HomePage = () => {
           </Link>
         </div>
         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <img src='/images/index-1.jpg' alt='description of your image' />
+          <img src='images/index-1.jpg' alt='description of your image' />
         </div>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '50px' }}>
         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <img src='/images/index-2.jpg' alt='description of your image' />
+          <img src='images/index-2.jpg' alt='description of your image' />
         </div>
         <div style={{ flex: 1, textAlign: 'center' }}>
           <h1>Storytellers</h1>
