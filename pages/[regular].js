@@ -59,8 +59,12 @@ export const getStaticPaths = async () => {
     }
   }))
 
+  const pathsWithoutBlogs = paths.filter(
+    (path) => path.params.regular !== 'blogs'
+  )
+
   return {
-    paths,
+    paths: pathsWithoutBlogs,
     fallback: false
   }
 }
