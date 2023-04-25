@@ -1,3 +1,5 @@
+// Import the Playwright configuration
+import config from '../playwright.config.js'
 import { test, expect } from '@playwright/test'
 
 test.describe('Accessibility tests', () => {
@@ -5,7 +7,7 @@ test.describe('Accessibility tests', () => {
 
   test.beforeEach(async ({ browser }) => {
     page = await browser.newPage()
-    await page.goto('baseURL')
+    await page.goto(config.use.baseURL) // Use the baseURL from the configuration
     await page.setViewportSize({ width: 1280, height: 800 })
   })
 
