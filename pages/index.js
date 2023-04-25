@@ -6,7 +6,6 @@ import Header from '@partials/Header'
 const HomePage = () => {
   return (
     <div>
-      /* Rajiv added the fix for Title on April 24- Start */
       <Head>
         <title>MyWebClass | Revolutionize Education</title>
         <meta
@@ -15,7 +14,6 @@ const HomePage = () => {
         />
         {/* other meta tags */}
       </Head>
-      /* Rajiv added the fix for Title on April 24- End */
       <Header />
 
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

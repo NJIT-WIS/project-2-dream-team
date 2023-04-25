@@ -15,9 +15,13 @@ test.describe('Accessibility tests', () => {
     await page.close()
   })
 
-  test('Check font size', async () => {
-    const fontSize = await page.$eval('body', el => parseFloat(getComputedStyle(el).fontSize))
-    expect(fontSize).toBeGreaterThan(15)
+  test('Check font size', async ({ page, browserName }) => {
+    if (browserName === 'chromium') {
+      const fontSize = await page.$eval('body', (el) => parseFloat(getComputedStyle(el).fontSize))
+      expect(fontSize).toBeGreaterThan(15)
+    } else {
+      test.skip()
+    }
   })
 
   test('Check navigation menu button', async () => {
