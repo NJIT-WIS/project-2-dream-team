@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import Footer from '@partials/Footer'
 import Header from '@partials/Header'
@@ -5,7 +6,18 @@ import Header from '@partials/Header'
 const HomePage = () => {
   return (
     <div>
+      /* Rajiv added the fix for Title on April 24- Start */
+      <Head>
+        <title>MyWebClass | Revolutionize Education</title>
+        <meta
+          name='description'
+          content='Revolutionize Education: Empower your classroom with Easy Daily Management'
+        />
+        {/* other meta tags */}
+      </Head>
+      /* Rajiv added the fix for Title on April 24- End */
       <Header />
+
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ flex: 1, textAlign: 'center' }}>
           <h1>The Future</h1>
