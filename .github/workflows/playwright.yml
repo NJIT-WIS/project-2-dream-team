@@ -17,7 +17,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libgbm-dev
-          sudo apt-get install -y libvpx7 libevent-2.1-7 libopus0 libwoff2dec1.0.2 libharfbuzz-icu0 libgstallocators-1.0-0 libgstapp-1.0-0 libgstpbutils-1.0-0 libgstaudio-1.0-0 libgsttag-1.0-0 libgstvideo-1.0-0 libgstgl-1.0-0 libgstfft-1.0-0 libhyphen0 libmanette-0.2-0 libflite1 libflite-usenglish libflite-cmulex libflite-cmu-us-awb libflite-cmu-us-kal libflite-cmu-us-rms libflite-cmu-us-slt libgles2 libx264-152
+          sudo apt-get install -y libvpx7 libevent-2.1-7 libopus0 libwoff2dec1 libharfbuzz-icu0 libgstreamer-plugins-base1.0-0 libhyphen0 libmanette-0.2-0 libflite1 libgles2 libx264-155
           npm ci
           npx playwright install chromium
           npm install -g lighthouse chrome-launcher axe-core chromium wait-on 
