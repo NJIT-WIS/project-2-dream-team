@@ -9,8 +9,13 @@ const TIMEOUT = 30000
 async function checkPageDescription (pageUrl, expectedDescription) {
   const browser = await chromium.launch()
   const page = await browser.newPage()
+  console.log(pageUrl) // Log the page URL
   await page.goto(pageUrl, { timeout: TIMEOUT })
-  const description = await page.$eval('meta[name="description"]', el => el.getAttribute('content'))
+  await page.waitForTimeout(2000) // Add a short delay
+  const description = await page.$eval(
+    'meta[name="description"]',
+    (el) => el.getAttribute('content')
+  )
   await browser.close()
   expect(description).toBe(expectedDescription)
 }

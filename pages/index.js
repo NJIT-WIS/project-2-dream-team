@@ -33,6 +33,14 @@ const HomePage = () => {
 
   return (
     <div>
+      <Head>
+        <title>MyWebClass | Revolutionize Education</title>
+        <meta
+          name='description'
+          content='Revolutionize Education: Empower your classroom with Easy Daily Management'
+        />
+        {/* other meta tags */}
+      </Head>
       <Header />
       {typeof window !== 'undefined' && !isAccepted && (
         <PrivacyPopup onAccept={handleAccept} onReject={handleReject} />

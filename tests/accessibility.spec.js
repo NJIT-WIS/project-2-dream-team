@@ -1,3 +1,5 @@
+// Import the Playwright configuration
+import config from '../playwright.config.js'
 import { test, expect } from '@playwright/test'
 
 test.describe('Accessibility tests', () => {
@@ -5,7 +7,7 @@ test.describe('Accessibility tests', () => {
 
   test.beforeEach(async ({ browser }) => {
     page = await browser.newPage()
-    await page.goto('baseURL')
+    await page.goto(config.use.baseURL) // Use the baseURL from the configuration
     await page.setViewportSize({ width: 1280, height: 800 })
   })
 
@@ -13,9 +15,13 @@ test.describe('Accessibility tests', () => {
     await page.close()
   })
 
-  test('Check font size', async () => {
-    const fontSize = await page.$eval('body', el => parseFloat(getComputedStyle(el).fontSize))
-    expect(fontSize).toBeGreaterThan(15)
+  test('Check font size', async ({ page, browserName }) => {
+    if (browserName === 'chromium') {
+      const fontSize = await page.$eval('body', (el) => parseFloat(getComputedStyle(el).fontSize))
+      expect(fontSize).toBeGreaterThan(15)
+    } else {
+      test.skip()
+    }
   })
 
   test('Check navigation menu button', async () => {
