@@ -1,11 +1,42 @@
-import Link from 'next/link'
-import Footer from '@partials/Footer'
+import { useState, useEffect } from "react";
+import { useCookies } from "react-cookie";
+import PrivacyPopup from "@components/PrivacyPopup";
 import Header from '@partials/Header'
+import Footer from '@partials/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Link from 'next/link'
 
 const HomePage = () => {
+  const [cookies, setCookie] = useCookies(["acceptedPrivacyPolicy"]);
+  const [isAccepted, setIsAccepted] = useState(
+    cookies.acceptedPrivacyPolicy === "true"
+  );
+
+  useEffect(() => {
+    let accepted = false;
+    if (typeof window !== "undefined") {
+      accepted =
+        localStorage.getItem("privacy-policy-accepted") === "true";
+    }
+    setIsAccepted(accepted);
+  }, []);
+
+  const handleAccept = () => {
+    localStorage.setItem("privacy-policy-accepted", "true");
+    setCookie("acceptedPrivacyPolicy", "true", { path: "/" });
+    setIsAccepted(true);
+  };
+
+  const handleReject = () => {
+    // Here you can add code to handle if the user rejects the privacy policy
+  };
+
   return (
     <div>
       <Header />
+      {typeof window !== 'undefined' && !isAccepted && (
+        <PrivacyPopup onAccept={handleAccept} onReject={handleReject} />
+      )}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ flex: 1, textAlign: 'center' }}>
           <h1>The Future</h1>

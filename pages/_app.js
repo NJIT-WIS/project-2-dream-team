@@ -5,6 +5,9 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import TagManager from 'react-gtm-module'
 import 'styles/style.scss'
+import '../pages/PrivacyPolicyPopup.module.css';
+
+
 
 const App = ({ Component, pageProps }) => {
   // import google font css
