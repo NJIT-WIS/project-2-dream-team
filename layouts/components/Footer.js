@@ -1,10 +1,37 @@
 import config from '@config/config.json'
+import Mailchimp from 'mailchimp-api-v3'
+if (typeof window !== 'undefined') {
+  const fs = require('fs')
+  const net = require('net')
+  const tls = require('tls')
+}
+
+const apiKey = '186d0bc66cb9c0e48b8ff009d50b176f-us13'
+const listId = '59759678dc'
+
+const mailchimp = new Mailchimp(apiKey)
 
 const Footer = () => {
   const { subscription } = config
 
   if (!subscription || !subscription.title) {
-    return null // or display an error message
+    return null
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const email = e.target.EMAIL.value
+
+    try {
+      await mailchimp.lists.addListMember(listId, {
+        email_address: email,
+        status: 'subscribed'
+      })
+      alert('Thanks for subscribing to our newsletter!')
+    } catch (error) {
+      alert('Sorry, something went wrong. Please try again later.')
+      console.error(error)
+    }
   }
 
   return (
@@ -20,63 +47,54 @@ const Footer = () => {
 
                 <div id='mc_embed_signup'>
                   <form
-                    action={subscription.mailChimpFormAction}
-                    method='post'
-                    id='mc-embedded-subscribe-form'
-                    name='mc-embedded-subscribe-form'
+                    onSubmit={handleSubmit}
                     className='validate'
                     target='_blank'
+                    noValidate
                   >
-                    <div
-                      id='mc_embed_signup_scroll'
-                      className='input-group flex-column flex-sm-row flex-nowrap flex-sm-nowrap'
-                    >
+                    <div className='mc-field-group'>
+                      <label htmlFor='mce-EMAIL'>
+                        Email Address <span className='asterisk'>*</span>
+                      </label>
                       <input
                         type='email'
+                        defaultValue=''
                         name='EMAIL'
-                        className='form-control required email w-auto text-center text-sm-start'
+                        className='required email'
                         id='mce-EMAIL'
-                        placeholder={subscription.formPlaceholder}
-                        aria-label='Subscription'
-                        autoComplete='new-email'
                         required
                       />
-                      <div id='mce-responses' className='clear'>
-                        <div
-                          className='response'
-                          id='mce-error-response'
-                          style={{ display: 'none' }}
-                        />
-                        <div
-                          className='response'
-                          id='mce-success-response'
-                          style={{ display: 'none' }}
-                        />
-                      </div>
+                    </div>
+                    <div id='mce-responses' className='clear'>
                       <div
-                        style={{ position: 'absolute', left: -5000 + 'px' }}
-                        aria-hidden='true'
+                        className='response'
+                        id='mce-error-response'
+                        style={{ display: 'none' }}
+                      />
+                      <div
+                        className='response'
+                        id='mce-success-response'
+                        style={{ display: 'none' }}
+                      />
+                    </div>
+                    <div style={{ position: 'absolute', left: '-5000px' }}>
+                      <input
+                        type='text'
+                        name='b_aaea64cc1ee1331667d23188f_59759678dc'
+                        tabIndex='-1'
+                        defaultValue=''
+                      />
+                    </div>
+                    <div className='input-group-append d-flex d-sm-inline-block mt-2 mt-sm-0 ms-0 w-auto'>
+                      <button
+                        type='submit'
+                        name='subscribe'
+                        id='mc-embedded-subscribe'
+                        className='input-group-text w-100 justify-content-center'
+                        aria-label='Subscription Button'
                       >
-                        <input
-                          type='text'
-                          name={subscription.mailChimpFormName}
-                          tabIndex='-1'
-                        />
-                      </div>
-                      <div className='input-group-append d-flex d-sm-inline-block mt-2 mt-sm-0 ms-0 w-auto'>
-                        <button
-                          type='submit'
-                          name='subscribe'
-                          id='mc-embedded-subscribe'
-                          className='input-group-text w-100 justify-content-center'
-                          aria-label='Subscription Button'
-                        >
-                          <i className='me-2'>
-                            <IconUserPlus size={16} />
-                          </i>
-                          {subscription.formButtonLabel}
-                        </button>
-                      </div>
+                        {subscription.formButtonLabel}
+                      </button>
                     </div>
                   </form>
                 </div>

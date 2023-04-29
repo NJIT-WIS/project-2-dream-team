@@ -15,11 +15,15 @@
     "test": "npx playwright test"
   },
   "dependencies": {
+    "chownr": "^2.0.0",
     "fs": "^0.0.1-security",
+    "fs-minipass": "^3.0.2",
     "github-slugger": "^2.0.0",
     "globby": "^13.1.4",
     "gray-matter": "^4.0.3",
+    "mailchimp-api-v3": "^1.15.0",
     "marked": "^4.2.4",
+    "net": "^1.0.2",
     "next": "13.0.7",
     "next-mdx-remote": "^4.0.0",
     "react": "18.2.0",
@@ -28,13 +32,15 @@
     "react-icons": "^4.7.1",
     "react-markdown": "^8.0.7",
     "rehype-slug": "^5.1.0",
-    "remark-gfm": "^3.0.1"
+    "remark-gfm": "^3.0.1",
+    "tls": "^0.0.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.32.3",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.8",
     "autoprefixer": "^10.4.13",
+    "browserify-fs": "^1.0.0",
     "date-fns": "^2.29.3",
     "date-fns-tz": "^1.3.7",
     "dotenv": "^16.0.3",
