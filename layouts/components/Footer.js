@@ -1,10 +1,25 @@
 import config from '@config/config.json'
+import axios from 'axios'
 
 const Footer = () => {
   const { subscription } = config
 
   if (!subscription || !subscription.title) {
-    return null // or display an error message
+    return null
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+
+    try {
+      const response = await axios.post('/api/subscribe', {
+        email: event.target.EMAIL.value
+      })
+
+      console.log(response.data.message)
+    } catch (error) {
+      console.error('Subscription failed.')
+    }
   }
 
   return (
@@ -20,63 +35,54 @@ const Footer = () => {
 
                 <div id='mc_embed_signup'>
                   <form
-                    action={subscription.mailChimpFormAction}
-                    method='post'
+                    onSubmit={handleSubmit}
                     id='mc-embedded-subscribe-form'
                     name='mc-embedded-subscribe-form'
                     className='validate'
-                    target='_blank'
                   >
-                    <div
-                      id='mc_embed_signup_scroll'
-                      className='input-group flex-column flex-sm-row flex-nowrap flex-sm-nowrap'
-                    >
+                    <div className='mc-field-group'>
+                      <label htmlFor='mce-EMAIL'>
+                        Email Address <span className='asterisk'>*</span>
+                      </label>
                       <input
                         type='email'
+                        defaultValue=''
                         name='EMAIL'
-                        className='form-control required email w-auto text-center text-sm-start'
+                        className='required email'
                         id='mce-EMAIL'
-                        placeholder={subscription.formPlaceholder}
-                        aria-label='Subscription'
-                        autoComplete='new-email'
                         required
                       />
-                      <div id='mce-responses' className='clear'>
-                        <div
-                          className='response'
-                          id='mce-error-response'
-                          style={{ display: 'none' }}
-                        />
-                        <div
-                          className='response'
-                          id='mce-success-response'
-                          style={{ display: 'none' }}
-                        />
-                      </div>
+                    </div>
+                    <div id='mce-responses' className='clear'>
                       <div
-                        style={{ position: 'absolute', left: -5000 + 'px' }}
-                        aria-hidden='true'
+                        className='response'
+                        id='mce-error-response'
+                        style={{ display: 'none' }}
+                      />
+                      <div
+                        className='response'
+                        id='mce-success-response'
+                        style={{ display: 'none' }}
+                      />
+                    </div>
+                    <div style={{ position: 'absolute', left: '-5000px' }}>
+                      <input
+                        type='text'
+                        name='b_aaea64cc1ee1331667d23188f_59759678dc'
+                        tabIndex='-1'
+                        defaultValue=''
+                      />
+                    </div>
+                    <div className='input-group-append d-flex d-sm-inline-block mt-2 mt-sm-0 ms-0 w-auto'>
+                      <button
+                        type='submit'
+                        name='subscribe'
+                        id='mc-embedded-subscribe'
+                        className='input-group-text w-100 justify-content-center'
+                        aria-label='Subscription Button'
                       >
-                        <input
-                          type='text'
-                          name={subscription.mailChimpFormName}
-                          tabIndex='-1'
-                        />
-                      </div>
-                      <div className='input-group-append d-flex d-sm-inline-block mt-2 mt-sm-0 ms-0 w-auto'>
-                        <button
-                          type='submit'
-                          name='subscribe'
-                          id='mc-embedded-subscribe'
-                          className='input-group-text w-100 justify-content-center'
-                          aria-label='Subscription Button'
-                        >
-                          <i className='me-2'>
-                            <IconUserPlus size={16} />
-                          </i>
-                          {subscription.formButtonLabel}
-                        </button>
-                      </div>
+                        {subscription.formButtonLabel}
+                      </button>
                     </div>
                   </form>
                 </div>
@@ -88,7 +94,8 @@ const Footer = () => {
           <div className='row'>
             <div className='col-lg-12 text-center'>
               <p className='mb-0 copyright-text content'>
-                {config.site.title} &copy; {new Date().getFullYear()} All rights reserved.
+                {config.site.title} &copy; {new Date().getFullYear()} All rights
+                reserved.
               </p>
             </div>
           </div>
