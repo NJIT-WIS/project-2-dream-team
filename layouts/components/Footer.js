@@ -1,15 +1,5 @@
 import config from '@config/config.json'
-import Mailchimp from 'mailchimp-api-v3'
-if (typeof window !== 'undefined') {
-  const fs = require('fs')
-  const net = require('net')
-  const tls = require('tls')
-}
-
-const apiKey = '186d0bc66cb9c0e48b8ff009d50b176f-us13'
-const listId = '59759678dc'
-
-const mailchimp = new Mailchimp(apiKey)
+import axios from 'axios'
 
 const Footer = () => {
   const { subscription } = config
@@ -18,19 +8,17 @@ const Footer = () => {
     return null
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    const email = e.target.EMAIL.value
+  const handleSubmit = async (event) => {
+    event.preventDefault()
 
     try {
-      await mailchimp.lists.addListMember(listId, {
-        email_address: email,
-        status: 'subscribed'
+      const response = await axios.post('/api/subscribe', {
+        email: event.target.EMAIL.value
       })
-      alert('Thanks for subscribing to our newsletter!')
+
+      console.log(response.data.message)
     } catch (error) {
-      alert('Sorry, something went wrong. Please try again later.')
-      console.error(error)
+      console.error('Subscription failed.')
     }
   }
 
@@ -48,9 +36,9 @@ const Footer = () => {
                 <div id='mc_embed_signup'>
                   <form
                     onSubmit={handleSubmit}
+                    id='mc-embedded-subscribe-form'
+                    name='mc-embedded-subscribe-form'
                     className='validate'
-                    target='_blank'
-                    noValidate
                   >
                     <div className='mc-field-group'>
                       <label htmlFor='mce-EMAIL'>
@@ -106,7 +94,8 @@ const Footer = () => {
           <div className='row'>
             <div className='col-lg-12 text-center'>
               <p className='mb-0 copyright-text content'>
-                {config.site.title} &copy; {new Date().getFullYear()} All rights reserved.
+                {config.site.title} &copy; {new Date().getFullYear()} All rights
+                reserved.
               </p>
             </div>
           </div>
