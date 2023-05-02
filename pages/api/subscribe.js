@@ -1,4 +1,4 @@
-import { addSubscriber } from '/mailchimp'
+import { addSubscriber } from 'mailchimp';
 
 export default async function subscribe (req, res) {
   const { email } = req.body
