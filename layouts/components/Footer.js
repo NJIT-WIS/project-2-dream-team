@@ -8,20 +8,6 @@ const Footer = () => {
     return null
   }
 
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-
-    try {
-      const response = await axios.post('/api/subscribe', {
-        email: event.target.EMAIL.value
-      })
-
-      console.log(response.data.message)
-    } catch (error) {
-      console.error('Subscription failed.')
-    }
-  }
-
   return (
     <footer>
       <div className='container'>
@@ -35,10 +21,13 @@ const Footer = () => {
 
                 <div id='mc_embed_signup'>
                   <form
-                    onSubmit={handleSubmit}
+                    action='https://github.us13.list-manage.com/subscribe/post?u=aaea64cc1ee1331667d23188f&id=59759678dc'
+                    method='post'
                     id='mc-embedded-subscribe-form'
                     name='mc-embedded-subscribe-form'
                     className='validate'
+                    target='_blank'
+                    noValidate
                   >
                     <div className='mc-field-group'>
                       <label htmlFor='mce-EMAIL'>
