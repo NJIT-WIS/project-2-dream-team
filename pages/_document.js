@@ -23,7 +23,7 @@ const Document = () => {
           media='(prefers-color-scheme: dark)'
           content='#000'
         />
-        <meta name="keywords" content="ai, agile and lean, technology, education" />
+        <meta name='keywords' content='ai, agile and lean, technology, education' />
       </Head>
       <body>
         <Main />
