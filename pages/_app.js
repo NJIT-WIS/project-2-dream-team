@@ -1,9 +1,11 @@
+import React, { useState } from 'react'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import ReactGA from 'react-ga'
 import config from '@config/config.json'
 import theme from '@config/theme.json'
 import { JsonContext } from 'context/state'
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
-import TagManager from 'react-gtm-module'
 import 'styles/style.scss'
 
 const App = ({ Component, pageProps }) => {
@@ -28,6 +30,17 @@ const App = ({ Component, pageProps }) => {
       config.params.tag_manager_id && TagManager.initialize(tagManagerArgs)
     }, 5000)
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // Google Analytics
+  const router = useRouter()
+  useEffect(() => {
+    ReactGA.initialize('G-R0VLZYGTMT')
+    ReactGA.pageview(window.location.pathname + window.location.search)
+
+    router.events.on('routeChangeComplete', () => {
+      ReactGA.pageview(window.location.pathname + window.location.search)
+    })
   }, [])
 
   return (
@@ -58,3 +71,4 @@ const App = ({ Component, pageProps }) => {
 }
 
 export default App
+

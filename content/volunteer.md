@@ -52,7 +52,7 @@ We are thrilled that you are considering joining our team of volunteers to work 
 <p>We believe that volunteering with MyWebClass is an excellent opportunity to make a positive impact in the lives of students while gaining valuable experience and learning advanced technologies. Join our team of volunteers today and help us build a platform that will transform education!</p>
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
-  <a href="/contact" style={{ backgroundColor: '#68D391', color: '#FFFFFF', padding: '10px 20px', borderRadius: '5px', textDecoration: 'none' }}>Contact Us</a>
+  <a href="contact" style={{ backgroundColor: '#68D391', color: '#FFFFFF', padding: '10px 20px', borderRadius: '5px', textDecoration: 'none' }}>Contact Us</a>
 </div>
 
 
