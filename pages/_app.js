@@ -4,8 +4,8 @@ import { JsonContext } from 'context/state'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import TagManager from 'react-gtm-module'
+import { CookieConsent } from 'react-cookie-consent'
 import 'styles/style.scss'
-
 
 const App = ({ Component, pageProps }) => {
   // import google font css
@@ -65,11 +65,31 @@ const App = ({ Component, pageProps }) => {
           }}
         />
       </Head>
+      <CookieConsent
+        location="bottom"
+        buttonText="I accept"
+        cookieName="myWebClassCookieConsent"
+        style={{ background: "#000", opacity: 0.9, color: "#fff" }}
+        buttonStyle={{ color: "#000", background: "#fff", borderRadius: "5px" }}
+        expires={365}
+      >
+        This website uses cookies to enhance the user experience.{" "}
+        <a
+          href="https://cookiesandyou.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn More
+        </a>
+      </CookieConsent>
       <Component {...pageProps} />
     </JsonContext>
   )
 }
 
 export default App
+
+
+
 
 
