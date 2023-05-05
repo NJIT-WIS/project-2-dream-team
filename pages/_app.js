@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
-import ReactGA from 'react-ga'
 import config from '@config/config.json'
 import theme from '@config/theme.json'
 import { JsonContext } from 'context/state'
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
+import TagManager from 'react-gtm-module'
 import 'styles/style.scss'
+import GoogleAnalytics from "@bradgarropy/next-google-analytics"
 
 const App = ({ Component, pageProps }) => {
   // import google font css
@@ -32,17 +31,6 @@ const App = ({ Component, pageProps }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Google Analytics
-  const router = useRouter()
-  useEffect(() => {
-    ReactGA.initialize('G-R0VLZYGTMT')
-    ReactGA.pageview(window.location.pathname + window.location.search)
-
-    router.events.on('routeChangeComplete', () => {
-      ReactGA.pageview(window.location.pathname + window.location.search)
-    })
-  }, [])
-
   return (
     <JsonContext>
       <Head>
@@ -64,6 +52,7 @@ const App = ({ Component, pageProps }) => {
           name='viewport'
           content='width=device-width, initial-scale=1, maximum-scale=5'
         />
+        <GoogleAnalytics measurementId="G-R0VLZYGTMT" />
       </Head>
       <Component {...pageProps} />
     </JsonContext>

@@ -15,6 +15,7 @@
     "test": "npx playwright test"
   },
   "dependencies": {
+    "@bradgarropy/next-google-analytics": "^1.0.2",
     "axios": "^1.4.0",
     "chownr": "^2.0.0",
     "cors": "^2.8.5",
@@ -52,6 +53,7 @@
     "eslint": "8.30.0",
     "eslint-config-next": "13.0.7",
     "husky": "^8.0.3",
+    "jest": "^29.5.0",
     "jest-playwright-preset": "^3.0.1",
     "jshint": "^2.13.6",
     "playwright": "^1.33.0",
