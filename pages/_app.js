@@ -5,7 +5,7 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import TagManager from 'react-gtm-module'
 import 'styles/style.scss'
-import GoogleAnalytics from "@bradgarropy/next-google-analytics"
+
 
 const App = ({ Component, pageProps }) => {
   // import google font css
@@ -52,7 +52,18 @@ const App = ({ Component, pageProps }) => {
           name='viewport'
           content='width=device-width, initial-scale=1, maximum-scale=5'
         />
-        <GoogleAnalytics measurementId="G-R0VLZYGTMT" />
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0VLZYGTMT"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R0VLZYGTMT');
+            `
+          }}
+        />
       </Head>
       <Component {...pageProps} />
     </JsonContext>
@@ -60,4 +71,5 @@ const App = ({ Component, pageProps }) => {
 }
 
 export default App
+
 
