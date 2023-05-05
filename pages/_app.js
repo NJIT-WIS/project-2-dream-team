@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import ReactGA from 'react-ga'
 import config from '@config/config.json'
@@ -20,17 +19,6 @@ const App = ({ Component, pageProps }) => {
       }&display=swap`
     ).then((res) => res.text().then((css) => setFontcss(css)))
   }, [pf, sf])
-
-  // google tag manager (gtm)
-  const tagManagerArgs = {
-    gtmId: config.params.tag_manager_id
-  }
-  useEffect(() => {
-    setTimeout(() => {
-      config.params.tag_manager_id && TagManager.initialize(tagManagerArgs)
-    }, 5000)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
 
   // Google Analytics
   const router = useRouter()
@@ -64,6 +52,19 @@ const App = ({ Component, pageProps }) => {
           name='viewport'
           content='width=device-width, initial-scale=1, maximum-scale=5'
         />
+        {/* Google tag (gtag.js) */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${config.params.google_analytics_id}`}></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', '${config.params.google_analytics_id}');
+            `
+          }}
+        />
       </Head>
       <Component {...pageProps} />
     </JsonContext>
@@ -71,4 +72,6 @@ const App = ({ Component, pageProps }) => {
 }
 
 export default App
+
+
 
