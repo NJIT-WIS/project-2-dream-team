@@ -22,24 +22,20 @@
       "hasChildren": true,
       "children": [
         {
-          "name": "Categories",
+          "name": "Resources",
           "url": "/categories"
         },
         {
-          "name": "Tags",
+          "name": "Services",
           "url": "/tags"
         },
         {
-          "name": "Elements",
-          "url": "/elements"
+          "name": "Join the Community",
+          "url": "/join"
         },
         {
           "name": "Privacy & Cookies Policy",
           "url": "/privacy-policy"
-        },
-        {
-          "name": "Volunteer",
-          "url": "/volunteer"
         }
       ]
     }
@@ -50,12 +46,12 @@
       "url": "/about"
     },
     {
-      "name": "Contact",
+      "name": "Register",
       "url": "/contact"
     },
     {
-      "name": "Volunteer",
-      "url": "/volunteer"
+      "name": "Join the Community",
+      "url": "/join"
     },
     {
       "name": "Privacy Policy",
