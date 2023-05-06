@@ -18,7 +18,7 @@
     },
     {
       "path": "/contact",
-      "title": "MyWebClass | Join The Community",
+      "title": "MyWebClass | Register",
       "description": "Contact MyWebClass for any questions, concerns, or feedback about our courses or platform. Our friendly and knowledgeable support team is available 24/7 to assist you. Whether you need help with enrolling in a course, accessing course materials, or troubleshooting technical issues, we're here to help. You can reach us by phone, email, or through our online contact form. Join the MyWebClass community today and let us help you achieve your learning goals!",
       "keywords": "ai, agile and lean, technology, education",
       "ogTitle": "MyWebClass",
@@ -41,8 +41,8 @@
       "ogDescription": "Revolutionize Education: Empower your classroom with Easy Daily Management"
     },
     {
-      "path": "/volunteer",
-      "title": "MyWebClass | Volunteer",
+      "path": "/join",
+      "title": "MyWebClass | Join the Community",
       "description": "Join the MyWebClass volunteer team and help us develop our website for AI education and agile and lean learning. As a volunteer, you will work with our team of experts to create engaging and effective online courses, develop cutting-edge features and technologies, and contribute to our mission of revolutionizing education. Whether you're a web developer, UX designer, content creator, or just passionate about education and technology, we have opportunities for you. Join us and make a difference in the lives of learners around the world!",
       "keywords": "ai, agile and lean, technology, education",
       "ogTitle": "MyWebClass",

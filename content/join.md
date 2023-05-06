@@ -1,6 +1,6 @@
 ---
-title: "MyWebClass | Volunteer"
-meta_title: "MyWebClass | Volunteer"
+title: "MyWebClass | Join the Community"
+meta_title: "MyWebClass | Join the Community"
 description: "Join the MyWebClass volunteer team and help us develop our website for AI education and agile and lean learning. As a volunteer, you will work with our team of experts to create engaging and effective online courses, develop cutting-edge features and technologies, and contribute to our mission of revolutionizing education. Whether you're a web developer, UX designer, content creator, or just passionate about education and technology, we have opportunities for you. Join us and make a difference in the lives of learners around the world!"
 ogTitle: "MyWebClass | Volunteer"
 image: "images/volunteer.jpg"
@@ -11,14 +11,13 @@ draft: false
   <img src="images/volunteer.jpg" alt="Guy at a computer working" style={{ width: '60%' }} />
 </div>
 
-# Welcome to the MyWebClass Volunteer Page!
+# Join the MyWebClass Community!
 
-We are thrilled that you are considering joining our team of volunteers to work on developing the MyWebClass website. Here are some reasons why you should volunteer with us:
-
+We are excited to offer the MyWebClass community to schools and their students! By registering your school on our website, you will unlock access to a plethora of educational resources and materials designed to help your students acquire new skills and knowledge. Here are some reasons why you should consider signing up your school:
 <div style={{ display: 'flex', gap: '20px', marginTop: '40px', marginBottom: '40px' }}>
   <div style={{ flex: '1', backgroundColor: '#F6AD55', padding: '20px' }}>
     <h2>Empower Students with Cutting-Edge Software Engineering Skills</h2>
-    <p>At MyWebClass, we believe that every student should have access to quality education and technology. By volunteering with us, you will be contributing to the development of a platform that empowers students with cutting-edge software engineering skills. This will not only help them in their future careers but also in their daily lives as technology becomes increasingly important.</p>
+    <p>At MyWebClass, we are committed to providing quality education and technology to all students. By registering your school on our website, you will gain access to a platform that empowers your students with cutting-edge software engineering skills. Our AI-driven learning approach and agile and lean methodologies ensure that your students receive a personalized learning experience that caters to their individual needs and preferences.</p>
   </div>
   <div style={{ flex: '1', backgroundColor: '#68D391', padding: '20px' }}>
     <h2>Join a Community of Like-Minded Individuals</h2>
@@ -52,7 +51,7 @@ We are thrilled that you are considering joining our team of volunteers to work 
 <p>We believe that volunteering with MyWebClass is an excellent opportunity to make a positive impact in the lives of students while gaining valuable experience and learning advanced technologies. Join our team of volunteers today and help us build a platform that will transform education!</p>
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
-  <a href="contact" style={{ backgroundColor: '#68D391', color: '#FFFFFF', padding: '10px 20px', borderRadius: '5px', textDecoration: 'none' }}>Contact Us</a>
+  <a href="contact" style={{ backgroundColor: '#68D391', color: '#FFFFFF', padding: '10px 20px', borderRadius: '5px', textDecoration: 'none' }}>Join Us</a>
 </div>
 
 
