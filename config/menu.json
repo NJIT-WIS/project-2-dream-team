@@ -22,12 +22,12 @@
       "hasChildren": true,
       "children": [
         {
-          "name": "Resources",
-          "url": "/categories"
-        },
-        {
           "name": "Services",
           "url": "/tags"
+        },
+        {
+          "name": "Resources",
+          "url": "/elements"
         },
         {
           "name": "Join the Community",
@@ -59,4 +59,5 @@
     }
   ]
 }
+
 
