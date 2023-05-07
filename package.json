@@ -25,6 +25,7 @@
     "github-slugger": "^2.0.0",
     "globby": "^13.1.4",
     "gray-matter": "^4.0.3",
+    "jsonp": "^0.2.1",
     "mailchimp": "^1.2.1",
     "mailchimp-api-v3": "^1.15.0",
     "marked": "^4.2.4",
@@ -41,7 +42,8 @@
     "react-markdown": "^8.0.7",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
-    "tls": "^0.0.1"
+    "tls": "^0.0.1",
+    "to-querystring": "^1.2.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.32.3",
