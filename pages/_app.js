@@ -53,7 +53,7 @@ const App = ({ Component, pageProps }) => {
           content='width=device-width, initial-scale=1, maximum-scale=5'
         />
         {/* Global site tag (gtag.js) - Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0VLZYGTMT"></script>
+        <script async src='https://www.googletagmanager.com/gtag/js?id=G-R0VLZYGTMT' />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -66,18 +66,18 @@ const App = ({ Component, pageProps }) => {
         />
       </Head>
       <CookieConsent
-        location="bottom"
-        buttonText="I accept"
-        cookieName="myWebClassCookieConsent"
-        style={{ background: "#000", opacity: 0.9, color: "#fff" }}
-        buttonStyle={{ color: "#000", background: "#fff", borderRadius: "5px" }}
+        location='bottom'
+        buttonText='I accept'
+        cookieName='myWebClassCookieConsent'
+        style={{ background: '#000', opacity: 0.9, color: '#fff' }}
+        buttonStyle={{ color: '#000', background: '#fff', borderRadius: '5px' }}
         expires={365}
       >
-        This website uses cookies to enhance the user experience.{" "}
+        This website uses cookies to enhance the user experience.{' '}
         <a
-          href="https://cookiesandyou.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+          href='https://cookiesandyou.com/'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           Learn More
         </a>
@@ -88,8 +88,3 @@ const App = ({ Component, pageProps }) => {
 }
 
 export default App
-
-
-
-
-
