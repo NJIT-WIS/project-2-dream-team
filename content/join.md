@@ -21,18 +21,18 @@ We are excited to offer the MyWebClass community to schools and their students! 
   </div>
   <div style={{ flex: '1', backgroundColor: '#68D391', padding: '20px' }}>
     <h2>Join a Community of Like-Minded Individuals</h2>
-    <p>When you volunteer with MyWebClass, you will be joining a community of passionate and driven individuals who share your interests and values. You will have the opportunity to collaborate with others who are committed to improving education through technology.</p>
+    <p>Join the MyWebClass community and connect with a network of passionate individuals committed to enhancing students' education through technology. Benefit from an active community forum, collaborate with other schools and educators, and access a comprehensive learning platform. Receive resources and support to help your school implement the project, including AI-driven learning and agile and lean methodologies. Offer your students a user-friendly and interactive learning experience, and provide them with professional and personal development opportunities that will enhance their resumes and portfolios.</p>
   </div>
 </div>
 
 <div style={{ display: 'flex', gap: '20px', marginTop: '40px', marginBottom: '40px' }}>
   <div style={{ flex: '1', backgroundColor: '#68D391', padding: '20px' }}>
     <h2>Learn and Discover Advanced Technologies</h2>
-    <p>As a volunteer with MyWebClass, you will have the opportunity to learn and discover advanced technologies that will transform your teaching and their learning journey. You will be working on a platform that uses the latest tools and techniques, which will help you stay up-to-date with the latest trends in software engineering.</p>
+    <p>By joining the MyWebClass community, school administrators will have the opportunity to enhance their knowledge and discover advanced technologies that will transform their teaching and their students' learning journeys. They will work on a platform that uses the latest tools and techniques, enabling them to stay up-to-date with the latest trends in software engineering. </p>
   </div>
   <div style={{ flex: '1', backgroundColor: '#F6AD55', padding: '20px' }}>
     <h2>Make a Positive Impact</h2>
-    <p>Volunteering with MyWebClass is a great way to make a positive impact in the lives of students. By contributing to the development of the website, you will be helping to create a platform that will provide students with access to quality education and technology.</p>
+    <p>Partnering with MyWebClass presents an excellent opportunity for schools to provide their students with access to quality education and technology. By utilizing our robust platform, which has been developed with the support of our partners, students can access these resources and improve their lives in a positive way. Your partnership with us can help make this possible.</p>
   </div>
 </div>
 
@@ -43,12 +43,12 @@ We are excited to offer the MyWebClass community to schools and their students! 
     </div>
     <div style={{ flex: '1', backgroundColor: '#FFFFFF', padding: '20px', marginLeft: '20px' }}>
       <h3>Gain valuable experience</h3>
-      <p>Volunteering with MyWebClass is a great way to gain valuable experience in software engineering, project management, and teamwork. You will have the opportunity to work on a real-world project and develop skills that will be valuable in your future career.</p>
+      <p>Collaborating with MyWebClass offers an excellent opportunity for schools to gain valuable experience in software engineering, project management, and teamwork. By working on a real-world project, school administrators can develop valuable skills that will be beneficial in their future careers. These skills are essential for success in today's job market, and partnering with us can help schools acquire them.</p>
     </div>
   </div>
 </div>
 
-<p>We believe that volunteering with MyWebClass is an excellent opportunity to make a positive impact in the lives of students while gaining valuable experience and learning advanced technologies. Join our team of volunteers today and help us build a platform that will transform education!</p>
+<p>We believe that partnering with MyWebClass can provide an excellent opportunity for schools to make a positive impact on the lives of students, while also gaining valuable experience and knowledge in advanced technologies. By joining our team, school administrators can help us build a platform that will transform education and improve access to quality resources for students. Partnering with us can be a great way to enhance the educational experience for your students and help you acquire valuable skills and knowledge.</p>
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <a href="contact" style={{ backgroundColor: '#68D391', color: '#FFFFFF', padding: '10px 20px', borderRadius: '5px', textDecoration: 'none' }}>Join Us</a>
