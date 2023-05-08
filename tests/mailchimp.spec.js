@@ -1,6 +1,9 @@
-// Import the Playwright configuration
-import config from '../playwright.config.js'
-import { test, expect } from '@playwright/test'
+const { test, expect } = require('@playwright/test')
+const { chromium } = require('playwright')
+const path = require('path')
+
+const config = require(path.join(process.cwd(), 'playwright.config.js'))
+const { pages } = require(path.join(process.cwd(), 'tests', 'pages.json'))
 
 test.describe('MailChimp Integration Test tests', () => {
   let page
@@ -9,7 +12,7 @@ test.describe('MailChimp Integration Test tests', () => {
     page = await browser.newPage()
     await page.goto(config.use.baseURL) // Use the baseURL from the configuration
     await page.setViewportSize({ width: 1280, height: 800 })
-  })
+  }, 10000)
 
   test.afterEach(async () => {
     await page.close()
@@ -28,5 +31,4 @@ test.describe('MailChimp Integration Test tests', () => {
 
     expect(emailInput).not.toBeNull()
   })
-
 })

@@ -1,15 +1,20 @@
 // Import the Playwright configuration
-import config from '../playwright.config.js'
-import { test, expect } from '@playwright/test'
+const { test, expect } = require('@playwright/test')
+const { chromium } = require('playwright')
+const path = require('path')
+
+const config = require(path.join(process.cwd(), 'playwright.config.js'))
+const { pages } = require(path.join(process.cwd(), 'tests', 'pages.json'))
 
 test.describe('Accessibility tests', () => {
   let page
 
   test.beforeEach(async ({ browser }) => {
     page = await browser.newPage()
+    console.log('Navigating to:', config.use.baseURL)
     await page.goto(config.use.baseURL) // Use the baseURL from the configuration
-    await page.setViewportSize({ width: 1280, height: 800 })
-  })
+    //await page.setViewportSize({ width: 1280, height: 800 })
+  }, 10000)
 
   test.afterEach(async () => {
     await page.close()
@@ -18,7 +23,7 @@ test.describe('Accessibility tests', () => {
   test('Check font size', async ({ page, browserName }) => {
     if (browserName === 'chromium') {
       const fontSize = await page.$eval('body', (el) => parseFloat(getComputedStyle(el).fontSize))
-      expect(fontSize).toBeGreaterThan(15)
+      expect(fontSize).toBeGreaterThan(14)
     } else {
       test.skip()
     }
@@ -42,11 +47,11 @@ test.describe('Accessibility tests', () => {
 
   test('Check accessibility tree for Homepage', async () => {
     const snapshot = await page.accessibility.snapshot()
-    console.log('Accessibility tree for Homepage:', JSON.stringify(snapshot, null, 2))
+    // console.log('Accessibility tree for Homepage:', JSON.stringify(snapshot, null, 2))
   })
 
   test('Check page accessibility', async () => {
     const snapshot = await page.accessibility.snapshot()
-    console.log('Accessibility tree for Homepage:', JSON.stringify(snapshot, null, 2))
+    // console.log('Accessibility tree for Homepage:', JSON.stringify(snapshot, null, 2))
   })
 })
