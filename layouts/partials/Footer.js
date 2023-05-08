@@ -8,25 +8,12 @@ import { useState } from 'react'
 
 const Footer = () => {
   const [email, setEmail] = useState('')
-  const [status, setStatus] = useState(null)
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value)
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    const response = await fetch('/api/subscribe', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ email })
-    })
-    const data = await response.json()
-    setStatus(data.status)
-    setEmail('')
-  }
+  const MAILCHIMP_FORM_ACTION = 'https://github.us13.list-manage.com/subscribe/post?u=aaea64cc1ee1331667d23188f&id=59759678dc&f_id=001cafe2f0'
 
   const { copyright } = config.params
   return (
@@ -43,14 +30,16 @@ const Footer = () => {
           ))}
         </ul>
         {/* subscription form */}
-        <form onSubmit={handleSubmit} className='mb-8'>
+        <form action={MAILCHIMP_FORM_ACTION} method='POST' className='mb-8'>
+          <input type='hidden' name='u' value='aaea64cc1ee1331667d23188f' />
+          <input type='hidden' name='id' value='59759678dc' />
           <label htmlFor='email' className='sr-only'>
             Email
           </label>
           <div className='flex'>
             <input
               type='email'
-              name='email'
+              name='EMAIL'
               id='email'
               value={email}
               onChange={handleEmailChange}
@@ -65,13 +54,6 @@ const Footer = () => {
               Subscribe
             </button>
           </div>
-          {status && (
-            <p className='mt-2 text-sm text-white'>
-              {status === 'success'
-                ? 'Thank you for subscribing!'
-                : 'Oops! Something went wrong. Please try again.'}
-            </p>
-          )}
         </form>
         {/* social icons */}
         <Social source={social} className='social-icons mb-8' />
