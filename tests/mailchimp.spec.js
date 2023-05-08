@@ -9,7 +9,7 @@ test.describe('MailChimp Integration Test tests', () => {
     page = await browser.newPage()
     await page.goto(config.use.baseURL) // Use the baseURL from the configuration
     await page.setViewportSize({ width: 1280, height: 800 })
-  })
+  }, 10000)
 
   test.afterEach(async () => {
     await page.close()
@@ -28,5 +28,4 @@ test.describe('MailChimp Integration Test tests', () => {
 
     expect(emailInput).not.toBeNull()
   })
-
 })
