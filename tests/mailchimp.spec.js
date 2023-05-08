@@ -1,6 +1,9 @@
-// Import the Playwright configuration
-import config from '../playwright.config.js'
-import { test, expect } from '@playwright/test'
+const { test, expect } = require('@playwright/test')
+const { chromium } = require('playwright')
+const path = require('path')
+
+const config = require(path.join(process.cwd(), 'playwright.config.js'))
+const { pages } = require(path.join(process.cwd(), 'tests', 'pages.json'))
 
 test.describe('MailChimp Integration Test tests', () => {
   let page
