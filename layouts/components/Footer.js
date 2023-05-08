@@ -1,5 +1,4 @@
 import config from '@config/config.json'
-import MailchimpSubscribe from './MailchimpSubscribe'
 
 const Footer = () => {
   const { subscription } = config
