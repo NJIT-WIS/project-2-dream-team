@@ -64,7 +64,7 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
       - name: Restore cache
-        uses: actions/cache@v2.2.1
+        uses: actions/cache/restore@v3
         with:
           path: |
             .next/cache
