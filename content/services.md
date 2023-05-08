@@ -5,6 +5,9 @@ description: "Partner with MyWebClass and help us develop a cutting-edge platfor
 ogTitle: "MyWebClass | Services"
 draft: false
 ---
+
+Welcome to our comprehensive services page, where we offer a range of learning solutions to help you achieve your academic and professional goals. Our platform is designed to empower students with cutting-edge software engineering skills, and we offer a variety of resources to support your learning journey.
+
 <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '1000px', margin: '0 auto', padding: '20px' }}>
   <div style={{ backgroundColor: '#f1f1f1', borderRadius: '10px', padding: '20px', width: '22%' }}>
     <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '10px' }}>Comprehensive Learning Platform</h3>
