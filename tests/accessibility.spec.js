@@ -1,4 +1,3 @@
-// Import the Playwright configuration
 const { test, expect } = require('@playwright/test')
 const { chromium } = require('playwright')
 const path = require('path')
@@ -6,18 +5,12 @@ const path = require('path')
 const config = require(path.join(process.cwd(), 'playwright.config.js'))
 const { pages } = require(path.join(process.cwd(), 'tests', 'pages.json'))
 
-test.describe('Accessibility tests', () => {
-  let page
+const TIMEOUT = 30000
+const pageUrl = `${config.use.baseURL}`
 
-  test.beforeEach(async ({ browser }) => {
-    page = await browser.newPage()
-    console.log('Navigating to:', config.use.baseURL)
-    await page.goto(config.use.baseURL) // Use the baseURL from the configuration
-    //await page.setViewportSize({ width: 1280, height: 800 })
-  }, 10000)
-
-  test.afterEach(async () => {
-    await page.close()
+test.describe('Accessibility Testing', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto(pageUrl)
   })
 
   test('Check font size', async ({ page, browserName }) => {
@@ -29,29 +22,29 @@ test.describe('Accessibility tests', () => {
     }
   })
 
-  test('Check navigation menu button', async () => {
+  test('Check navigation menu button', async ({ page }) => {
     const menuButton = await page.$('[aria-label="Open Navigation Menu"]')
     expect(menuButton).toBeTruthy()
   })
 
-  test('Check Facebook link', async () => {
+  test('Check Facebook link', async ({ page }) => {
     const facebookLink = await page.$('[aria-label="facebook"]')
     expect(facebookLink).toBeTruthy()
   })
 
-  test('Check email input', async () => {
+  test('Check email input', async ({ page }) => {
     const emailInput = await page.$('#email')
     const ariaInvalid = await emailInput.getAttribute('aria-invalid')
     expect(ariaInvalid).toBeFalsy()
   })
 
-  test('Check accessibility tree for Homepage', async () => {
+  test('Check accessibility tree for Homepage', async ({ page }) => {
     const snapshot = await page.accessibility.snapshot()
-    // console.log('Accessibility tree for Homepage:', JSON.stringify(snapshot, null, 2))
+    // console.log('Accessibility tree for Homepage:', JSON.stringify(snapshot, null, 2));
   })
 
-  test('Check page accessibility', async () => {
+  test('Check page accessibility', async ({ page }) => {
     const snapshot = await page.accessibility.snapshot()
-    // console.log('Accessibility tree for Homepage:', JSON.stringify(snapshot, null, 2))
+    // console.log('Accessibility tree for Homepage:', JSON.stringify(snapshot, null, 2));
   })
 })

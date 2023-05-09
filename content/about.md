@@ -38,20 +38,19 @@ Join us on our mission to revolutionize education and create a better future for
 Together, we can build a brighter tomorrow for generations to come.
 
 <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-  <div className="flex flex-col items-center">
-     <img src="images/bm.jpg" alt="Author 1" className="rounded-full w-36 h-36" />
+  <div className="team-member flex flex-col items-center team-member">
+    <img src="images/bm.jpg" alt="Author 1" className="rounded-full w-36 h-36" />
     <p className="text-lg font-bold my-2">Berta Marani</p>
     <p className="text-sm">Berta is a highly skilled professional who works in the field of manufacturing CAR-T cell therapy for leukemia patients. She enjoys learning new information and is pursuing a Master's degree in Data Science as a way to keep learning. In her spare time she loves to travel, swim, play volleyball, eat and sleep.</p>
   </div>
-  <div className="flex flex-col items-center">
+  <div className="team-member flex flex-col items-center team-member">
     <img src="images/ta.jpg" alt="Author 2" className="rounded-full w-36 h-36" />
     <p className="text-lg font-bold my-2">Tawana Arthur</p>
     <p className="text-sm">Tawana is an Application System Analyst, who works for a healthcare system. With a love for developing coding skills and watching docuseries, she also enjoys traveling to explore new cultures and destinations. But above all, her true passion lies in making a positive impact on the lives of others. Through her work in the healthcare system, she is dedicated to improving patient outcomes and delivering high-quality care.</p>
   </div>
-  <div className="flex flex-col items-center">
+  <div className="team-member flex flex-col items-center team-member">
     <img src="images/rj.jpg" alt="Author 3" className="rounded-full w-36 h-36" />
     <p className="text-lg font-bold my-2">Rajiv Kumar</p>
     <p className="text-sm">Rajiv  is a senior technical manager with 16 years of experience in the industry. He has a passion for technology and has spent the last 4 years developing his skills in computing. His career goal is to become a cloud solution architect. Rajiv is also a devoted family man who enjoys taking care of his loved ones and helping others whenever possible.</p>
   </div>
 </div>
-
