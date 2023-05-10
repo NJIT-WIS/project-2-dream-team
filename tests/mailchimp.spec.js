@@ -5,20 +5,15 @@ const path = require('path')
 const config = require(path.join(process.cwd(), 'playwright.config.js'))
 const { pages } = require(path.join(process.cwd(), 'tests', 'pages.json'))
 
+const TIMEOUT = 30000
+const pageUrl = `${config.use.baseURL}`
+
 test.describe('MailChimp Integration Test tests', () => {
-  let page
+  test.beforeEach(async ({ page }) => {
+    await page.goto(pageUrl)
+  }, TIMEOUT)
 
-  test.beforeEach(async ({ browser }) => {
-    page = await browser.newPage()
-    await page.goto(config.use.baseURL) // Use the baseURL from the configuration
-    await page.setViewportSize({ width: 1280, height: 800 })
-  }, 10000)
-
-  test.afterEach(async () => {
-    await page.close()
-  })
-
-  test('Verify email input element', async () => {
+  test('Verify email input element', async ({ page }) => {
     // Find the input element with the "Enter your email" placeholder
     const emailInput = await page.$('input[placeholder="Enter your email"]')
 

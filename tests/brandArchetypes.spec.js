@@ -5,6 +5,13 @@ const path = require('path')
 const config = require(path.join(process.cwd(), 'playwright.config.js'))
 const pageUrl = `${config.use.baseURL}`
 
+const TIMEOUT = 30000
+
+test.describe('Brand Archetype Testing', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto(pageUrl)
+  },TIMEOUT)
+
 test('Check for the brand message presence', async ({ page }) => {
   await page.goto(pageUrl)
   const brandMessage = await page.$('h1:has-text("The Future")')
@@ -46,3 +53,4 @@ test('Check for the presence of engagement elements', async ({ page }) => {
 //  const newsElement = await page.$('.news-element')
 //  expect(newsElement).toBeTruthy()
 // })
+})

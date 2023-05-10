@@ -11,7 +11,7 @@ const pageUrl = `${config.use.baseURL}`
 test.describe('Accessibility Testing', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto(pageUrl)
-  })
+  }, TIMEOUT)
 
   test('Check font size', async ({ page, browserName }) => {
     if (browserName === 'chromium') {
