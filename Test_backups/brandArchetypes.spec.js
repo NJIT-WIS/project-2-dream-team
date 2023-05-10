@@ -7,28 +7,26 @@ const { pages } = require(path.join(process.cwd(), 'tests', 'pages.json'))
 
 const TIMEOUT = 30000
 
-async function checkEmailInputElement (pageUrl) {
+async function checkBrandArchetypeElements (pageUrl) {
   const browser = await chromium.launch()
   const page = await browser.newPage()
   await page.goto(pageUrl, { timeout: TIMEOUT })
+  await page.waitForTimeout(2000) // Add a short delay
 
-  const emailInput = await page.$('input[placeholder="Enter your email"]')
+  // Check for the brand message presence
+  const brandMessage = await page.$('h1:has-text("The Future")')
+  expect(brandMessage).toBeTruthy()
 
-  if (emailInput) {
-    const outerHTML = await emailInput.evaluate((el) => el.outerHTML)
-    console.log('Email input outer HTML:', outerHTML)
-  } else {
-    console.log('Email input not found')
-  }
+  // Check for the presence of engagement elements
+  const engagementElement = await page.$('button:has-text("Go to Blogs")')
+  expect(engagementElement).toBeTruthy()
 
   await browser.close()
-  expect(emailInput).not.toBeNull()
 }
 
 pages.forEach((page) => {
-  test(`Verify email input element on "${page.path}"`, async ({}) => {
-    console.log(page.path)
+  test(`Brand Archetype Testing for "${page.path}"`, async ({}) => {
     const pageUrl = `${config.use.baseURL}${page.path}`
-    await checkEmailInputElement(pageUrl)
+    await checkBrandArchetypeElements(pageUrl)
   })
 })
